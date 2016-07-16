@@ -1,6 +1,6 @@
 /*
  * File name:		GrossPay.java
- * Author:			Fahad Abunayyan
+ * Author:			xFahad
  * Date:			03/24/16
  * Description:		This program calculates the gross pay of an employee using JFrame windows, Action Listener, and events. It has 
  * 					a window that contain labels and text fields that help the user to enter the input. There are two buttons that
