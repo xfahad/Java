@@ -1,10 +1,9 @@
 /*
  * File name:		GrossPay.java
- * Author:			Fahad Abunayyan
- * Section:			ist 242
- * Assignment:		Lab 8
- * Date:			03/24/16
- * Description:		This program calculates the gross pay of an employee using JFrame windows, Action Listener, and events. It has 
+ * Author:		xFahad
+
+ * Date:		03/24/16
+ * Description:		This a GUI program calculates the gross pay of an employee using JFrame windows, Action Listener, and events. It has 
  * 					a window that contain labels and text fields that help the user to enter the input. There are two buttons that
  * 					perform an action when they are clicked, Cancel and Calculate.
  */
