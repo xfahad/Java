@@ -1,10 +1,10 @@
 /*
  * File name:		GrossPay.java
- * Author:		xFahad
- * Date:		03/24/16
- * Description:		This a GUI program calculates the gross pay of an employee using JFrame windows, Action Listener, and events. It has 
- * 			a window that contain labels and text fields that help the user to enter the input. There are two buttons that
- * 			perform an action when they are clicked, Cancel and Calculate.
+ * Author:			Fahad Abunayyan
+ * Date:			03/24/16
+ * Description:		This program calculates the gross pay of an employee using JFrame windows, Action Listener, and events. It has 
+ * 					a window that contain labels and text fields that help the user to enter the input. There are two buttons that
+ * 					perform an action when they are clicked, Cancel and Calculate.
  */
 
 import java.awt.event.*;
@@ -16,22 +16,22 @@ public class GrossPay extends JFrame implements ActionListener
 {
 
 
-	JLabel  	lblFirstName,			// describe the first name text field
+	JLabel  lblFirstName,			// describe the first name text field
 			lblLastName,			// describe the last name text field
 			lblRegularHours,		// describe the regular hours text field
 			lblOvertimeHours,		// describe the overtime hours text field
-			lblPayRate,			// describe the pay rate text field
+			lblPayRate,				// describe the pay rate text field
 			lblFullName,			// describe the full name text field
 			lblGrossPay,			// describe the gross pay text field
-			lblRegularHoursResult,		// describe the regular hours result text field
-			lblOvertimeHoursResult;		// describe the overtime hours result text field
+			lblRegularHoursResult,	// describe the regular hours result text field
+			lblOvertimeHoursResult;	// describe the overtime hours result text field
 	
 // input text fields
-	JTextField  		txtFirstName,			// text field to get input of employee's first name
+	JTextField  txtFirstName,			// text field to get input of employee's first name
 				txtLastName,			// text field to get input of employee's last name
 				txtRegularHours,		// text field to get input of employee's regular hours
 				txtOvertimeHours,		// text field to get input of employee's overtime hours
-				txtPayRate,			// text field to get input of employee's pay rate
+				txtPayRate,				// text field to get input of employee's pay rate
 				
 // output text fields
 				txtFullName,			// text field to show output of employee's full name
@@ -39,7 +39,7 @@ public class GrossPay extends JFrame implements ActionListener
 				txtRegularHoursResult,	// text field to show output of employee's regular hours result
 				txtOvertimeHoursResult;	// text field to show output of employee's overtime  hours result
 	
-	JButton 	cmdCalculate, 		// button that execute the process of calculation
+	JButton cmdCalculate, 	// button that execute the process of calculation
 			cmdCancel,		// exits the program
 			cmdClear;		// button to clear text fields
 	
@@ -48,7 +48,7 @@ public class GrossPay extends JFrame implements ActionListener
 	{
 		// TODO Auto-generated constructor stub
 		
-		lblFirstName = new JLabel(" First Name:");			// texts that will be displayed in the label
+		lblFirstName = new JLabel(" First Name:");				// texts that will be displayed in the label
 		lblLastName = new JLabel(" Last Name:");
 		lblRegularHours = new JLabel(" Regular Hours:");
 		lblOvertimeHours = new JLabel(" Overtime Hours:");
@@ -60,7 +60,7 @@ public class GrossPay extends JFrame implements ActionListener
 
 
 		
-		txtFirstName = new JTextField(10);			// create text fields
+		txtFirstName = new JTextField(10);				// creating text fields
 		txtLastName = new JTextField(10);
 		txtRegularHours = new JTextField(10);
 		txtOvertimeHours = new JTextField(10);
@@ -70,7 +70,7 @@ public class GrossPay extends JFrame implements ActionListener
 		txtOvertimeHoursResult = new JTextField(10);
 		txtGrossPay = new JTextField(10);
 		
-		txtFullName.setBackground(null);				// set transparent background for textfields to differentiate between input text field and output
+		txtFullName.setBackground(null);					// set transparent background for textfields to differentiate between input text field and output
 		this.txtFullName.setEditable(false);				// to control the text field and not to tempt user to enter data
 		this.txtRegularHoursResult.setBackground(null);
 		this.txtRegularHoursResult.setEditable(false);
@@ -137,7 +137,7 @@ public class GrossPay extends JFrame implements ActionListener
 		double dOvertimeHours = 0; 		// hold the overtime hours
 		double dPayRate = 0;			// hold the pay rate
 		double dGrossPay = 0;			// hold the total (Gross pay)
-		String strGrossPay;			// to convert the gross pay to a String to be able to display it in the text field
+		String strGrossPay;		// to convert the gross pay to a String to be able to display it in the text field
 		
 	
 		
@@ -147,19 +147,19 @@ public class GrossPay extends JFrame implements ActionListener
 		case "Calculate": // if this button clicked, do what's below
 			
 			
-			dRegularHours = Double.parseDouble(txtRegularHours.getText()); 			// get regular hours input 
-			dOvertimeHours = Double.parseDouble(txtOvertimeHours.getText()); 		// get overtime hours input 
-			dPayRate = Double.parseDouble(txtPayRate.getText());				// get pay rate input
+			dRegularHours = Double.parseDouble(txtRegularHours.getText()); 				// get regular hours input 
+			dOvertimeHours = Double.parseDouble(txtOvertimeHours.getText()); 			// get overtime hours input 
+			dPayRate = Double.parseDouble(txtPayRate.getText());						// get pay rate input
 			dGrossPay = (dRegularHours * dPayRate) + (dOvertimeHours * dPayRate * 1.5);	// set gross pay calculation to this variable
 			
-			strGrossPay = String.valueOf(dGrossPay); 						// convert gross pay to the string
+			strGrossPay = String.valueOf(dGrossPay); 										// convert gross pay to the string
 			txtFullName.setText(txtFirstName.getText() + " " + txtLastName.getText());		// display full name of employee
-			txtRegularHoursResult.setText(txtRegularHours.getText());				// display regular hours
-			txtOvertimeHoursResult.setText(txtOvertimeHours.getText());				// display overtime hours
-			txtGrossPay.setText("$" + strGrossPay);							// display gross pay
+			txtRegularHoursResult.setText(txtRegularHours.getText());						// display regular hours
+			txtOvertimeHoursResult.setText(txtOvertimeHours.getText());						// display overtime hours
+			txtGrossPay.setText("$" + strGrossPay); 										// display gross pay
 			break;
 			
-		case "Cancel": //  if this button is clicked, do what's in below
+		case "Cancel": //  if this button clicked, do what's below
 			System.exit(0); // exit the program
 			break;
 		case "Clear":
@@ -188,8 +188,8 @@ public class GrossPay extends JFrame implements ActionListener
 		// TODO Auto-generated method stub
 		
 		
-		GrossPay employee = new GrossPay(); 	// create an object 
-		employee.setVisible(true); 		// set the GrossPay() window to visible
+		GrossPay employee = new GrossPay(); // create an object 
+		employee.setVisible(true); 			// set the GrossPay() window to visible
 		employee.setResizable(false);		// do not allow user to change size
 		
 
